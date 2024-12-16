@@ -1,0 +1,186 @@
+/* Global Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #f4f7fa, #e6ecf0); /* Subtle gradient background */
+    color: #333;
+    height: 100%;
+    width: 100%;
+  }
+  
+  /* Main Container */
+  .list-container {
+    width: 100%; /* Full width */
+    max-width: 100%; /* Ensure it spans the entire screen */
+    margin: 0 auto;
+    text-align: center;
+    background: #ffffff;
+    padding: 20px 20px;
+    border-radius: 0; /* Remove border radius to make it span full width */
+    box-shadow: none; /* No shadow for full-width design */
+    animation: fadeIn 1.2s ease-in-out;
+  }
+  
+  /* Heading */
+  .heading {
+    font-size: 32px;
+    color: #007bff;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  /* Link for Create Invoice */
+  .link {
+    display: inline-block;
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #28a745;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .link:hover {
+    color: #1e7e34;
+    text-decoration: underline;
+    transform: scale(1.05);
+  }
+  
+  /* Invoice Grid */
+  .invoices {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 0 10px;
+  }
+  
+  /* Invoice Card */
+  .invoice-card {
+    background: #ffffff;
+    border: 2px solid #f1f1f1;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideUp 1s ease-in-out;
+  }
+  
+  .invoice-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-color: #007bff;
+  }
+  
+  /* Invoice Description */
+  .description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  
+  /* Invoice Amount */
+  .amount {
+    font-size: 20px;
+    font-weight: bold;
+    color: #28a745;
+    margin-bottom: 15px;
+  }
+  
+  /* Trigger Automation Button */
+  .button {
+    background: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  .button:active {
+    background-color: #004085;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .heading {
+      font-size: 28px;
+    }
+  
+    .link {
+      font-size: 16px;
+    }
+  
+    .description {
+      font-size: 14px;
+    }
+  
+    .amount {
+      font-size: 18px;
+    }
+  
+    .button {
+      font-size: 14px;
+      padding: 8px 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .list-container {
+      padding: 15px;
+    }
+  
+    .heading {
+      font-size: 24px;
+    }
+  
+    .link {
+      font-size: 14px;
+    }
+  
+    .button {
+      font-size: 12px;
+      padding: 8px;
+    }
+  
+    .invoice-card {
+      padding: 15px;
+    }
+  }
+  

@@ -1,0 +1,168 @@
+/* Global Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    width: 100%;
+    background-color: #6aa3d7; /* Light blue background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Full-Screen Login Page */
+  .login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+  }
+  
+  /* Full-Screen Form */
+  .login-form {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 40%; /* Takes up 40% of the screen width */
+    max-width: 600px; /* Max form width */
+    min-width: 300px; /* Minimum width for smaller screens */
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  /* Title */
+  .login-title {
+    font-size: clamp(24px, 3vw, 36px); /* Responsive font size */
+    margin-bottom: 20px;
+    color: #333333;
+  }
+  
+  /* Input Fields */
+  .login-input {
+    width: 100%; /* Full input width */
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    background-color: #010812;
+    font-size: 16px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+  }
+  
+  .login-input::placeholder {
+    color: #a1a1a1;
+  }
+  
+  /* Submit Button */
+  .login-button {
+    width: 100%; /* Full button width */
+    padding: 12px;
+    margin-top: 15px;
+    background-color: #007bff;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .login-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.03);
+  }
+  
+  /* Social Icons */
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .fb {
+    background-color: #1877f2; /* Facebook */
+    color: #ffffff;
+  }
+  
+  .google {
+    background-color: #db4437; /* Google */
+    color: #ffffff;
+  }
+  
+  .twitter {
+    background-color: #1da1f2; /* Twitter */
+    color: #ffffff;
+  }
+  
+  .icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .login-form {
+      width: 80%; /* Takes up 80% of the width on smaller screens */
+    }
+  
+    .icon {
+      width: 40px;
+      height: 40px;
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .login-form {
+      width: 95%; /* Takes up 95% of the screen width on very small screens */
+      padding: 20px;
+    }
+  
+    .login-title {
+      font-size: 20px;
+    }
+  
+    .login-button {
+      font-size: 16px;
+      padding: 10px;
+    }
+  
+    .icon {
+      width: 35px;
+      height: 35px;
+      font-size: 14px;
+    }
+  }
+  
