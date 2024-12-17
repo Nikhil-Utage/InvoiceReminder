@@ -37,52 +37,43 @@ body, html {
   .login-title {
     font-size: clamp(24px, 3vw, 36px); /* Responsive font size */
     margin-bottom: 20px;
-    color: #333333;
+    color: #db4437; /* Google Red */
   }
   
-  /* Input Fields */
-  .login-input {
-    width: 100%; /* Full input width */
+  /* New Google Sign-In Button */
+  .google-signin-button {
+    width: 100%;
     padding: 12px;
-    margin: 10px 0;
+    margin: 20px 0;
     border: none;
     border-radius: 8px;
-    background-color: #010812;
-    font-size: 16px;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
-    outline: none;
-  }
-  
-  .login-input::placeholder {
-    color: #a1a1a1;
-  }
-  
-  /* Submit Button */
-  .login-button {
-    width: 100%; /* Full button width */
-    padding: 12px;
-    margin-top: 15px;
-    background-color: #007bff;
+    background-color: #db4437; /* Google Red */
     color: #ffffff;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
+    font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease;
   }
   
-  .login-button:hover {
-    background-color: #0056b3;
-    transform: scale(1.03);
+  .google-signin-button:hover {
+    background-color: #c33d2e;
   }
   
-  /* Social Icons */
+  /* Social Media Section */
+  .social-section {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .social-section p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px; /* Spacing between text and icons */
+  }
+  
   .social-icons {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-top: 20px;
   }
   
   .icon {
@@ -95,28 +86,26 @@ body, html {
     height: 50px;
     font-size: 18px;
     font-weight: bold;
+    color: #ffffff;
     cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .fb {
-    background-color: #1877f2; /* Facebook */
-    color: #ffffff;
-  }
-  
-  .google {
-    background-color: #db4437; /* Google */
-    color: #ffffff;
-  }
-  
-  .twitter {
-    background-color: #1da1f2; /* Twitter */
-    color: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
   .icon:hover {
     transform: scale(1.1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .fb {
+    background-color: #1877f2; /* Facebook */
+  }
+  
+  .google {
+    background-color: #db4437; /* Google */
+  }
+  
+  .twitter {
+    background-color: #1da1f2; /* Twitter */
   }
   
   /* Animations */
@@ -165,4 +154,3 @@ body, html {
       font-size: 14px;
     }
   }
-  

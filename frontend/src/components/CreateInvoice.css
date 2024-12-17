@@ -2,9 +2,9 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #4b79a1, #6aa3d7); /* Soft gradient */
-    color: #333;
+    font-family: 'Roboto', sans-serif; /* Changed to a more professional font */
+    background: #f4f6f8; /* Changed to a light, neutral background */
+    color: #2c3e50; /* Darker text color for better readability */
     height: 100%;
     width: 100%;
   }
@@ -17,9 +17,10 @@ body, html {
     align-items: center;
     height: 100vh; /* Full viewport height */
     width: 100vw; /* Full viewport width */
-    background: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    background: #ffffff; /* Solid white background for a clean look */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
+    padding: 40px; /* Increased padding for more whitespace */
+    border-radius: 8px; /* Slightly rounded corners for a modern look */
     animation: fadeIn 1s ease-in-out;
     box-sizing: border-box;
   }
@@ -27,10 +28,10 @@ body, html {
   /* Heading */
   .heading {
     font-size: clamp(24px, 5vw, 36px); /* Responsive font size */
-    color: #007bff;
+    color: #34495e; /* Changed to a darker, more professional blue */
     margin-bottom: 20px;
     text-align: center;
-    font-weight: 600;
+    font-weight: 700; /* Increased font weight for emphasis */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
   }
   
@@ -38,53 +39,100 @@ body, html {
   .form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 25px; /* Increased gap between form elements */
     width: 100%;
     max-width: 500px; /* Limit form width */
     background: #ffffff;
     border-radius: 12px;
-    padding: 30px;
+    padding: 40px; /* Increased padding for a spacious layout */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     animation: slideUp 1s ease-in-out;
     box-sizing: border-box;
   }
   
+  /* Form Rows */
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  /* Form Groups */
+  .form-group {
+    flex: 1 1 45%; /* Two columns */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; /* Added spacing between form groups */
+  }
+
+  /* Full-width Form Group */
+  .full-width {
+    flex: 1 1 100%;
+  }
+
   /* Labels */
   .label {
     font-size: 16px;
     font-weight: 500;
-    color: #555;
-    margin-bottom: 8px;
+    color: #34495e; /* Darker label color for better contrast */
+    margin-bottom: 5px;
+    display: block;
+    text-align: left; /* Align labels to the left */
   }
   
-  /* Input Fields */
-  .input {
+
+/* Input Fields */
+.input {
     width: 100%;
-    padding: 12px;
+    padding: 14px; /* Increased padding for better usability */
     font-size: 16px;
-    border: 2px solid #050000;
-    border-radius: 8px;
-    background-color: #0c0101;
+    border: 1px solid #ccd1d9; /* Subtle border color */
+    border-radius: 4px; /* Slightly rounded corners */
+    background-color: #ffffff; /* White background */
+    color: #333; /* Input text color */
     box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    appearance: auto; /* Restore date picker */
   }
   
+  /* Calendar Picker Icon */
+  .input[type="date"]::-webkit-calendar-picker-indicator {
+    display: block; /* Ensure visibility */
+    cursor: pointer;
+    filter: invert(20%) sepia(100%) saturate(300%) hue-rotate(180deg) brightness(90%);
+    /* The 'filter' adjusts color to make it visible (example: dark gray/black) */
+    opacity: 1; /* Ensure the icon is fully visible */
+    padding: 5px;
+  }
+  
+  /* Focus State */
   .input:focus {
     outline: none;
-    border-color: #007bff;
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+    border-color: #2980b9; /* Professional blue focus color */
+    box-shadow: 0 0 5px rgba(41, 128, 185, 0.5); /* Subtle shadow on focus */
+  }
+  
+  /* Placeholder Styling */
+  .input::placeholder {
+    color: #a0a0a0; /* Subtle gray color */
+    font-style: italic;
+    opacity: 1; /* Ensure visibility */
+  }
+
+  .input:focus::placeholder {
+    color: transparent; /* Hide placeholder on focus */
   }
   
   /* Submit Button */
   .button {
     width: 100%;
-    padding: 12px;
-    font-size: 18px;
+    padding: 14px; /* Increased padding for better click area */
+    font-size: 16px; /* Consistent font size */
     font-weight: bold;
     color: #ffffff;
-    background: #007bff;
+    background: #2980b9; /* Professional blue color */
     border: none;
-    border-radius: 8px;
+    border-radius: 4px; /* Slightly rounded corners */
     cursor: pointer;
     text-transform: uppercase;
     transition: background-color 0.3s ease, transform 0.2s ease;
@@ -92,12 +140,12 @@ body, html {
   }
   
   .button:hover {
-    background-color: #0056b3;
-    transform: scale(1.03);
+    background-color: #1f6391; /* Darker blue on hover */
+    transform: scale(1.02); /* Subtle scale effect */
   }
   
   .button:active {
-    background-color: #004085;
+    background-color: #174a73; /* Even darker blue on active */
     transform: scale(1);
   }
   
@@ -131,7 +179,7 @@ body, html {
     }
   
     .heading {
-      font-size: 28px;
+      font-size: 26px; /* Adjusted for better mobile readability */
     }
   
     .input {
@@ -143,6 +191,14 @@ body, html {
       font-size: 16px;
       padding: 10px;
     }
+
+    .form-row {
+      flex-direction: column;
+    }
+
+    .form-group {
+      flex: 1 1 100%;
+    }
   }
   
   @media (max-width: 480px) {
@@ -152,12 +208,12 @@ body, html {
     }
   
     .heading {
-      font-size: 24px;
+      font-size: 22px; /* Adjusted for smaller screens */
     }
   
     .input {
       font-size: 14px;
-      padding: 8px;
+      padding: 10px;
     }
   
     .button {
@@ -165,4 +221,3 @@ body, html {
       padding: 8px;
     }
   }
-  
